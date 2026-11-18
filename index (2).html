@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kablan Kouamé Ezekiel | MDL : finance quantitative, actuariat et data/IA</title>
+<meta name="description" content="Portfolio de Kablan Kouamé Ezekiel, étudiant en Master 2 de Mathématiques Appliquées (actuariat et finance quantitative, IUA, Côte d’Ivoire) : recherche BRVM, régression quantile, gestion des risques, data et IA.">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📈%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f7f5ef;--tx:#0b1f3a;--mu:#465160;--cd:#fff;--bd:#d6d2c4;--pb:#0b1f3a;--bt:#fff;--gr:#1f5d46;--au:#a88530;--er:#a01c1c;--sh:0 1px 2px rgba(11,31,58,.08),0 8px 20px rgba(11,31,58,.05);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#09131f;--tx:#ece9e0;--mu:#a9b3c1;--cd:#102036;--bd:#27395a;--pb:#d8b56a;--bt:#09131f;--gr:#6cc4a0;--au:#d8b56a;--er:#ff9a9a;--sh:none;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#09131f;--tx:#ece9e0;--mu:#a9b3c1;--cd:#102036;--bd:#27395a;--pb:#d8b56a;--bt:#09131f;--gr:#6cc4a0;--au:#d8b56a;--er:#ff9a9a;--sh:none;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth;height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:1rem/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;min-height:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3,h4,.logo b{font-family:Georgia,"Iowan Old Style","Palatino Linotype",Palatino,"Times New Roman",serif;font-weight:700;line-height:1.2;margin:0}
+a{color:var(--gr)}
+:focus-visible{outline:3px solid var(--au);outline-offset:2px;border-radius:3px}
+.w{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:56px 0;border-top:1px solid var(--bd)}
+h2{font-size:clamp(1.55rem,4vw,2.1rem);margin-bottom:8px}
+.lead{color:var(--mu);max-width:62ch;margin:0 0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--bg);border-bottom:1px solid var(--bd)}
+.bar{display:flex;align-items:center;gap:12px;min-height:60px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);margin-right:auto}
+.logo svg{width:34px;height:34px}
+.logo b{font-size:1.05rem}
+.logo span{font-size:.85rem;color:var(--mu)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 10px;color:var(--tx);text-decoration:none;border-radius:6px;font-size:.92rem}
+nav a:hover{background:var(--bd)}
+.ib{width:44px;height:44px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:8px;cursor:pointer;font-size:1.1rem}
+#bg{display:none}
+@media (max-width:860px){#bg{display:block}.logo span{display:none}nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--bd)}nav.o{display:block}nav ul{flex-direction:column;padding:8px 20px 16px}nav a{padding:12px 8px}}
+.hero{padding:56px 0 48px;border-top:0}
+.hg{display:grid;gap:32px;align-items:center}
+@media (min-width:860px){.hg{grid-template-columns:1.25fr .75fr}}
+h1{font-size:clamp(2.1rem,6.5vw,3.5rem);letter-spacing:-.01em}
+.sub{font-family:Georgia,serif;font-size:1.2rem;color:var(--gr);margin:12px 0}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+.btn{display:inline-block;min-height:44px;padding:10px 20px;border-radius:8px;border:1.5px solid var(--pb);background:var(--pb);color:var(--bt);font:inherit;font-weight:600;text-decoration:none;cursor:pointer}
+.btn.s{background:transparent;color:var(--tx)}
+.btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed}
+.rep{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.rep li{border-left:3px solid var(--au);padding:2px 12px;color:var(--mu);font-size:.92rem}
+.curve{width:100%;height:auto;color:var(--tx)}
+.curve figcaption{font-size:.8rem;color:var(--mu)}
+.grid{display:grid;gap:16px}
+@media (min-width:700px){.g2{grid-template-columns:1fr 1fr}}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:10px;padding:18px;box-shadow:var(--sh)}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{border:1px solid var(--bd);border-radius:999px;padding:4px 12px;font-size:.9rem}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.fl button{min-height:44px;padding:8px 14px;border:1px solid var(--bd);background:var(--cd);color:var(--tx);border-radius:999px;font:inherit;cursor:pointer}
+.fl button[aria-pressed="true"]{background:var(--pb);color:var(--bt);border-color:var(--pb)}
+.acc{border:1px solid var(--bd);border-radius:10px;background:var(--cd);margin-bottom:12px;box-shadow:var(--sh)}
+.acc h3{font-size:1.05rem}
+.acc>h3>button{all:unset;box-sizing:border-box;display:flex;width:100%;justify-content:space-between;gap:12px;padding:16px 18px;cursor:pointer;min-height:44px}
+.acc>h3>button:focus-visible{outline:3px solid var(--au);outline-offset:-3px}
+.acc>h3>button::after{content:"+";font-size:1.3rem;line-height:1}
+.acc>h3>button[aria-expanded="true"]::after{content:"−"}
+.pn{padding:0 18px 18px}
+.pn[hidden]{display:none}
+dl{margin:0}dt{font-weight:700;margin-top:10px}dd{margin:2px 0 0;color:var(--mu)}
+.tag{font-size:.85rem;color:var(--mu);font-weight:400}
+.note{border:1px solid var(--au);border-radius:8px;padding:8px 12px;font-size:.92rem;margin:12px 0}
+.pb{height:8px;background:var(--bd);border-radius:4px;overflow:hidden;margin:12px 0}
+.pb i{display:block;height:100%;width:9%;background:var(--gr);transition:width .25s}
+.dots{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 12px;padding:0}
+.dots button{width:44px;height:44px;border-radius:50%;border:1px solid var(--bd);background:var(--cd);color:var(--tx);font:inherit;cursor:pointer}
+.dots button[aria-current="step"]{background:var(--pb);color:var(--bt);border-color:var(--pb);font-weight:700}
+.sc{border-left:4px solid var(--au);padding:4px 16px;margin-bottom:12px}
+.sc h4{font-size:1.2rem;margin:4px 0}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.fld{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
+.fld label{font-weight:600}
+input,select{min-height:44px;padding:8px 12px;border:1px solid var(--mu);border-radius:8px;background:var(--bg);color:var(--tx);font:inherit;width:100%}
+input[aria-invalid="true"]{border-color:var(--er);border-width:2px}
+.err{color:var(--er);font-size:.88rem;margin:0;min-height:0}
+.out{display:grid;gap:12px;margin-top:16px}
+@media (min-width:700px){.out{grid-template-columns:repeat(4,1fr)}}
+.out div{border:1px solid var(--bd);border-radius:8px;padding:12px;background:var(--bg)}
+.out dt{margin:0;font-size:.85rem;color:var(--mu);font-weight:400}.out dd{margin:0;font:700 1.3rem Georgia,serif;color:var(--tx)}
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--au)}
+.tl li{margin-bottom:20px;position:relative}
+.tl li::before{content:"";position:absolute;left:-30px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--gr)}
+.ct{display:grid;gap:8px;margin:0 0 16px}
+#em{font-weight:700;word-break:break-all}
+footer{border-top:1px solid var(--bd);padding:32px 0;color:var(--mu);font-size:.9rem}
+footer ul{list-style:none;display:flex;flex-wrap:wrap;gap:12px;padding:0}
+.js .rv{opacity:0;transition:opacity .5s}.js .rv.in{opacity:1}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transition:none}.pb i{transition:none}}
+.sr{position:absolute;left:-9999px}.sr:focus{left:12px;top:12px;z-index:70;background:var(--pb);color:var(--bt);padding:10px 16px;border-radius:8px}
+</style>
+</head>
+<body>
+<a class="sr" href="#main" id="sk">Aller au contenu</a>
+<header>
+<div class="w bar">
+<a class="logo" href="#accueil" aria-label="MDL, accueil"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#0b1f3a"/><path d="M7 28 L15 18 L22 23 L33 10" fill="none" stroke="#d8b56a" stroke-width="2.5"/><text x="7" y="36" font-size="8" font-family="Georgia,serif" fill="#fff">MDL</text></svg><b>MDL</b><span>Kablan Kouamé Ezekiel</span></a>
+<nav id="nv" aria-label="Navigation principale"><ul>
+<li><a href="#accueil">Accueil</a></li><li><a href="#apropos">À propos</a></li><li><a href="#competences">Compétences</a></li><li><a href="#projets">Projets</a></li><li><a href="#outils">Outils</a></li><li><a href="#parcours">Parcours</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<button class="ib" id="th" type="button" aria-label="Basculer le thème clair ou sombre">◐</button>
+<button class="ib" id="bg" type="button" aria-expanded="false" aria-controls="nv" aria-label="Ouvrir le menu">☰</button>
+</div>
+</header>
+<main id="main"><noscript><p class="w note">Les compétences, les projets et le calculateur nécessitent JavaScript.</p></noscript>
+<section class="hero" id="accueil"><div class="w hg">
+<div>
+<h1>Kablan Kouamé Ezekiel</h1>
+<p class="sub">Quantitative Finance | Actuarial Science | Data &amp; AI</p>
+<p>Étudiant en Master 2 de Mathématiques Appliquées, spécialité actuariat et finance quantitative. Je m’intéresse à la modélisation des marchés financiers, à la mesure des risques et à l’intelligence artificielle appliquée à la finance.</p>
+<div class="btns"><a class="btn" href="#projets">Découvrir mes projets</a><a class="btn s" href="#contact">Me contacter</a></div>
+<ul class="rep"><li>Master 2 : finance quantitative et actuariat</li><li>Recherche principale : BRVM-QAI</li><li>Côte d’Ivoire</li></ul>
+</div>
+<figure class="curve" style="margin:0"><svg viewBox="0 0 320 170" role="img" aria-labelledby="ct"><title id="ct">Schéma pédagogique : densité normale avec la queue de perte à gauche</title><path d="M10 150 C70 150 100 20 160 20 C220 20 250 150 310 150 Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 150 C40 150 62 112 76 88 L76 150 Z" fill="#a88530" opacity=".55"/><line x1="76" y1="88" x2="76" y2="150" stroke="#a88530" stroke-width="2"/><line x1="10" y1="150" x2="310" y2="150" stroke="currentColor"/></svg><figcaption>Schéma illustratif, sans données : la zone dorée représente la queue de distribution dont la VaR fixe le seuil.</figcaption></figure>
+</div></section>
+
+<section id="apropos" class="rv"><div class="w">
+<h2>À propos</h2>
+<p class="lead">Ma formation en mathématiques appliquées m’a conduit vers l’actuariat et la finance quantitative. Je m’intéresse aux marchés financiers, en particulier à celui de la BRVM, et à l’analyse quantitative des rendements et des risques. J’explore l’apport de l’intelligence artificielle à ces questions. Mon objectif est de concevoir des solutions rigoureuses, fondées sur les données.</p>
+</div></section>
+
+<section id="competences" class="rv"><div class="w">
+<h2>Compétences</h2>
+<p class="lead">Domaines étudiés et utilisés dans ma formation et mes projets. Aucun niveau chiffré n’est affiché.</p>
+<div class="fl" id="fl" role="group" aria-label="Filtrer les compétences"></div>
+<div class="grid g2" id="sk-g"></div>
+</div></section>
+
+<section id="projets" class="rv"><div class="w">
+<h2>Projets</h2>
+<p class="lead">Chaque projet est présenté selon son état réel. Les éléments non confirmés sont signalés « [À COMPLÉTER] ».</p>
+<div id="pj"></div>
+<div id="sw">
+<div id="stp" role="group" aria-label="Architecture BRVM-QAI en 11 étapes">
+<p class="note">Architecture de recherche envisagée, pas nécessairement un système opérationnel.</p>
+<div class="pb" role="progressbar" aria-label="Progression dans l’architecture" aria-valuemin="1" aria-valuemax="11" aria-valuenow="1" id="pr"><i id="pf"></i></div>
+<ol class="dots" id="dots"></ol>
+<div class="sc" aria-live="polite"><p id="sn" class="tag"></p><h4 id="st"></h4><p id="sr"></p><p id="sm"></p></div>
+<div class="row"><button class="btn s" id="pv" type="button">Précédent</button><button class="btn" id="nx" type="button">Suivant</button></div>
+<p class="tag">Astuce clavier : flèches gauche et droite.</p>
+</div></div>
+</div></section>
+
+<section id="outils" class="rv"><div class="w">
+<h2>Calculateur de risque</h2>
+<p class="lead">Outil pédagogique, exécuté localement dans votre navigateur : aucune saisie n’est transmise. Les entrées de rendement et de risque sont en pourcentage.</p>
+<div class="card" id="calc" role="group" aria-label="Calculateur de ratios et de VaR paramétrique">
+<div class="grid g2" id="cf"></div>
+<div class="row"><button class="btn" id="go" type="button">Calculer</button><button class="btn s" id="rs" type="button">Réinitialiser</button></div>
+<p class="err" id="gerr" role="alert"></p>
+<dl class="out" id="out" aria-live="polite" hidden>
+<div><dt>Ratio de Sharpe</dt><dd id="o1"></dd></div><div><dt>Ratio de Sortino</dt><dd id="o2"></dd></div><div><dt>VaR (proportion)</dt><dd id="o3"></dd></div><div><dt>VaR (FCFA)</dt><dd id="o4"></dd></div></dl>
+<p id="nt" class="note" hidden></p>
+<p class="tag">Formules : Sharpe = (Rp − Rf)/σp ; Sortino = (Rp − Rf)/σd ; VaR = z·σp − Rp. Hypothèses : rendements normaux, horizon implicite identique à celui des paramètres saisis (par exemple annuel si Rp et σp sont annuels). Outil illustratif, non une recommandation d’investissement.</p>
+</div>
+</div></section>
+
+<section id="parcours" class="rv"><div class="w">
+<h2>Parcours</h2>
+<ol class="tl">
+<li><h3>Master 1, Institut Universitaire d’Abidjan (IUA)</h3><p class="tag">Dates : [À COMPLÉTER]</p></li>
+<li><h3>Master 2 en Mathématiques Appliquées, actuariat et finance quantitative (IUA)</h3><p class="tag">Année 2026–2027 [À CONFIRMER]</p></li>
+<li><h3>Projet de recherche BRVM-QAI</h3><p class="tag">Projet associé au concours du 30<sup>e</sup> anniversaire de la BRVM. Dates : [À COMPLÉTER]</p></li>
+<li><h3>Expériences et stages</h3><p class="tag">[À COMPLÉTER]</p></li>
+</ol>
+</div></section>
+
+<section id="contact" class="rv"><div class="w">
+<h2>Contact</h2>
+<div class="ct">
+<p>E-mail : <span id="em">[À COMPLÉTER]</span></p>
+<p>LinkedIn : <span id="li">[À COMPLÉTER]</span></p>
+<p>GitHub : <span id="gh">[À COMPLÉTER]</span></p>
+<p>Ville : Abidjan, Côte d’Ivoire</p>
+</div>
+<div class="row"><button class="btn" id="cp" type="button">Copier l’e-mail</button><a class="btn s" id="ml" role="link" aria-disabled="true">Écrire par e-mail</a></div>
+<p id="cs" role="status" class="tag"></p>
+</div></section>
+</main>
+<footer><div class="w">
+<p><strong>Kablan Kouamé Ezekiel</strong><br>MDL Quantitative Finance, <span id="yr"></span></p>
+<ul><li><a href="#accueil">Accueil</a></li><li><a href="#competences">Compétences</a></li><li><a href="#projets">Projets</a></li><li><a href="#outils">Outils</a></li><li><a href="#contact">Contact</a></li></ul>
+
+<p>Confidentialité : aucune donnée n’est collectée ; seul le choix du thème est mémorisé localement dans votre navigateur.</p>
+</div></footer>
+<script>
+(function(){'use strict';
+document.documentElement.classList.add('js');
+var NB='\u00a0';
+function $(s){return document.querySelector(s);}
+function h(t,a,c){var e=document.createElement(t);if(a)for(var k in a){if(k==='class')e.className=a[k];else e.setAttribute(k,a[k]);}
+(Array.isArray(c)?c:(c==null?[]:[c])).forEach(function(x){e.append(x);});return e;}
+
+/*CALC*/
+var Z={'95':1.6448536269,'99':2.3263478740};
+var FIELDS=[
+{id:'rp',min:-100,max:100,pos:false},{id:'rf',min:-100,max:100,pos:false},
+{id:'sp',min:0,max:100,pos:true},{id:'sd',min:0,max:100,pos:true},{id:'vp',min:0,max:1e15,pos:true}];
+function parseNum(s){var t=String(s).replace(/[\s\u00a0\u202f]/g,'').replace(',','.');
+if(!/^[+-]?(\d+\.?\d*|\.\d+)$/.test(t))return NaN;var n=Number(t);return Number.isFinite(n)?n:NaN;}
+function validate(raw){var errors={},v={};
+FIELDS.forEach(function(f){var s=raw[f.id];
+if(s==null||String(s).trim()===''){errors[f.id]='Champ obligatoire.';return;}
+var n=parseNum(s);
+if(Number.isNaN(n)){errors[f.id]='Saisissez un nombre valide, par exemple 8,5.';return;}
+if(f.pos&&n<=0){errors[f.id]='La valeur doit être strictement positive.';return;}
+if(n<f.min||n>f.max){errors[f.id]='Valeur hors des bornes plausibles ('+f.min+' à '+f.max+').';return;}
+v[f.id]=n;});
+var c=String(raw.conf);
+if(!Object.prototype.hasOwnProperty.call(Z,c))errors.conf='Niveau de confiance invalide.';else v.conf=c;
+return {errors:errors,v:v,ok:Object.keys(errors).length===0};}
+function compute(v){var z=Z[v.conf],ex=v.rp-v.rf,varP=(z*v.sp-v.rp)/100;
+return {sharpe:ex/v.sp,sortino:ex/v.sd,varP:varP,varF:v.vp*varP,z:z};}
+/*ENDCALC*/
+
+/* Thème */
+function eff(){var t=document.documentElement.getAttribute('data-theme');if(t)return t;return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+try{var sv=localStorage.getItem('mdl-theme');if(sv==='dark'||sv==='light')document.documentElement.setAttribute('data-theme',sv);}catch(e){}
+$('#th').addEventListener('click',function(){var n=eff()==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);try{localStorage.setItem('mdl-theme',n);}catch(e){}});
+
+/* Menu */
+var bg=$('#bg'),nv=$('#nv');
+function menu(o){nv.classList.toggle('o',o);bg.setAttribute('aria-expanded',String(o));bg.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');}
+bg.addEventListener('click',function(){menu(!nv.classList.contains('o'));});
+nv.addEventListener('click',function(e){if(e.target.tagName==='A')menu(false);});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nv.classList.contains('o')){menu(false);bg.focus();}});
+
+/* Compétences */
+var SK=[
+['A','Mathématiques et statistiques',['Probabilités','Statistiques','Optimisation','Économétrie','Séries temporelles','Régression quantile']],
+['B','Machine learning et IA',['Elastic-Net','Random Forest','XGBoost','Prévision']],
+['C','Finance de marché',['Markowitz','VaR','CVaR','Gestion des risques','Analyse de la BRVM']],
+['D','Outils',['Python','Excel','VBA','SQL','LaTeX']]];
+var fl=$('#fl'),sg=$('#sk-g'),cur='all';
+function renderSk(){sg.textContent='';SK.forEach(function(s){if(cur!=='all'&&cur!==s[0])return;
+sg.append(h('div',{class:'card'},[h('h3',null,s[1]),h('ul',{class:'chips'},s[2].map(function(x){return h('li',null,x);}))]));});
+fl.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.k===cur));});}
+[['all','Toutes']].concat(SK.map(function(s){return [s[0],s[1]];})).forEach(function(p){
+var b=h('button',{type:'button','data-k':p[0],'aria-pressed':'false'},p[1]);
+b.addEventListener('click',function(){cur=p[0];renderSk();});fl.append(b);});
+renderSk();
+
+/* Projets */
+var TBC='[À COMPLÉTER]';
+var PJ=[
+{t:'BRVM-QAI',s:'Projet de recherche associé au concours du Prix de la Recherche du 30e anniversaire de la BRVM',open:true,f:[
+['Intitulé','Innovation financière et digitalisation des opérations de marché à la BRVM : analyse quantitative, intelligence artificielle, blockchain et tokenisation à l’horizon 2030.'],
+['Contexte','Évolution des marchés financiers régionaux et de leurs opérations vers le numérique.'],
+['Problématique','Comment l’analyse quantitative, l’IA, la blockchain et la tokenisation peuvent-elles faire évoluer les opérations de la BRVM ?'],
+['Objectifs','Proposer une architecture de recherche reliant données, modèles prédictifs, optimisation de portefeuille et gestion des risques.'],
+['Méthodologie','Pipeline en 11 étapes décrit ci-dessous (méthodes envisagées).'],
+['Outils','Python, Excel [détails à confirmer]'],
+['État d’avancement',TBC+' (statut exact du concours : '+TBC+')'],
+['Perspectives','Validation des étapes sur données de marché, selon l’avancement réel.'],
+['Documents',TBC]],stepper:true},
+{t:'Mémoire sur la régression linéaire quantile',s:'État : '+TBC,f:[
+['Principe','Estimer des quantiles conditionnels de la variable étudiée, et non seulement sa moyenne conditionnelle.'],
+['Distribution conditionnelle','Elle décrit l’ensemble de la loi de Y sachant X, y compris les queues.'],
+['Application potentielle','Étude des rendements financiers, notamment des quantiles extrêmes.'],
+['Comparaison','La régression classique modélise la moyenne ; la régression quantile permet un regard sur toute la distribution.'],
+['Perspectives','Apports possibles en gestion des risques (VaR). Aucun résultat empirique n’est présenté ici.'],
+['Résultats',TBC],['Documents',TBC]]},
+{t:'Autres projets',s:'Selon leur état réel',f:[
+['Optimisation de portefeuille (Markowitz)','État : '+TBC],
+['Analyse quantitative de la BRVM','État : '+TBC],
+['Risques financiers','État : '+TBC],
+['Automatisation Python et VBA','État : '+TBC],
+['IA et finance','État : '+TBC]]}];
+var pj=$('#pj');
+PJ.forEach(function(p,i){
+var bid='pb'+i,pid='pp'+i;
+var btn=h('button',{type:'button',id:bid,'aria-expanded':String(!!p.open),'aria-controls':pid},[h('span',null,[p.t,h('br'),h('span',{class:'tag'},p.s)])]);
+var pn=h('div',{class:'pn',id:pid,role:'region','aria-labelledby':bid});
+if(!p.open)pn.hidden=true;
+var dl=h('dl');p.f.forEach(function(r){dl.append(h('dt',null,r[0]),h('dd',null,r[1]));});pn.append(dl);
+if(p.stepper)pn.append($('#sw'));
+btn.addEventListener('click',function(){var o=btn.getAttribute('aria-expanded')==='true';btn.setAttribute('aria-expanded',String(!o));pn.hidden=o;});
+pj.append(h('article',{class:'acc'},[h('h3',null,btn),pn]));});
+
+/* Stepper */
+var ST=[
+['Collecte des données','Rassembler les séries de cours et d’indices de la BRVM et leurs métadonnées.','Sources officielles, contrôle de qualité, traçabilité'],
+['Prétraitement','Nettoyer, aligner et mettre en forme les séries.','Valeurs manquantes, calcul des rendements, détection de ruptures'],
+['Feature engineering','Construire les variables explicatives.','Retards, volatilité glissante, indicateurs de tendance'],
+['Moteur IA','Estimer les modèles d’apprentissage.','Elastic-Net, Random Forest, XGBoost'],
+['Prédiction des rendements','Produire des prévisions de rendement.','Prévision ponctuelle, régression quantile, validation temporelle'],
+['Génération des signaux','Traduire les prévisions en signaux de décision.','Seuils, règles de décision, filtrage'],
+['Optimisation du portefeuille','Répartir le capital selon rendement et risque.','Markowitz, contraintes de pondération'],
+['Gestion quantitative des risques','Mesurer et contrôler le risque du portefeuille.','VaR, CVaR, tests de scénarios'],
+['Backtesting','Tester la stratégie sur des données non utilisées pour l’estimation.','Fenêtres glissantes, hors échantillon, coûts de transaction'],
+['Évaluation des performances','Comparer rendement ajusté du risque et référence.','Sharpe, Sortino, perte maximale, indice de référence'],
+['Tableau de bord décisionnel','Restituer les résultats de façon lisible pour la décision.','Synthèse des signaux, des risques et des performances']];
+var si=0,dots=$('#dots');
+ST.forEach(function(s,i){var b=h('button',{type:'button','aria-label':'Étape '+(i+1)+' : '+s[0]},String(i+1));
+b.addEventListener('click',function(){go(i);});dots.append(h('li',null,b));});
+function go(i){si=Math.max(0,Math.min(ST.length-1,i));var s=ST[si];
+$('#sn').textContent='Étape '+(si+1)+' sur 11';$('#st').textContent=s[0];$('#sr').textContent='Rôle : '+s[1];$('#sm').textContent='Méthodes envisagées : '+s[2]+'.';
+$('#pf').style.width=((si+1)/ST.length*100)+'%';$('#pr').setAttribute('aria-valuenow',String(si+1));
+$('#pr').setAttribute('aria-valuetext','Étape '+(si+1)+' sur 11');
+dots.querySelectorAll('button').forEach(function(b,k){if(k===si)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');});
+$('#pv').disabled=si===0;$('#nx').disabled=si===ST.length-1;}
+$('#pv').addEventListener('click',function(){go(si-1);});$('#nx').addEventListener('click',function(){go(si+1);});
+$('#stp').addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight'){go(si+1);e.preventDefault();}else if(e.key==='ArrowLeft'){go(si-1);e.preventDefault();}});
+go(0);
+
+/* Calculateur */
+var LB={rp:'Rendement moyen Rp (%)',rf:'Taux sans risque Rf (%)',sp:'Écart-type σp (%)',sd:'Écart-type à la baisse σd (%)',vp:'Valeur du portefeuille Vp (FCFA)'};
+var cf=$('#cf'),inp={};
+FIELDS.forEach(function(f){var i=h('input',{id:'i-'+f.id,type:'text',inputmode:'decimal',autocomplete:'off','aria-describedby':'e-'+f.id});inp[f.id]=i;
+cf.append(h('div',{class:'fld'},[h('label',{for:'i-'+f.id},LB[f.id]),i,h('p',{class:'err',id:'e-'+f.id})]));
+i.addEventListener('keydown',function(e){if(e.key==='Enter')run();});});
+var sel=h('select',{id:'i-conf','aria-describedby':'e-conf'},[h('option',{value:'95'},'95 %'+'\u00a0(z = 1,6448536269)'),h('option',{value:'99'},'99 %'+'\u00a0(z = 2,3263478740)')]);
+cf.append(h('div',{class:'fld'},[h('label',{for:'i-conf'},'Niveau de confiance'),sel,h('p',{class:'err',id:'e-conf'})]));
+function fmt(n,d){return n.toLocaleString('fr-FR',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function run(){var raw={conf:sel.value};FIELDS.forEach(function(f){raw[f.id]=inp[f.id].value;});
+var r=validate(raw);
+FIELDS.concat([{id:'conf'}]).forEach(function(f){var el=$('#e-'+f.id),inpEl=f.id==='conf'?sel:inp[f.id];
+el.textContent=r.errors[f.id]||'';if(r.errors[f.id])inpEl.setAttribute('aria-invalid','true');else inpEl.removeAttribute('aria-invalid');});
+var out=$('#out'),nt=$('#nt');
+if(!r.ok){out.hidden=true;nt.hidden=true;$('#gerr').textContent='Corrigez les champs signalés pour lancer le calcul.';return;}
+$('#gerr').textContent='';var c=compute(r.v);
+$('#o1').textContent=fmt(c.sharpe,4);$('#o2').textContent=fmt(c.sortino,4);
+$('#o3').textContent=fmt(c.varP*100,2)+NB+'%';$('#o4').textContent=fmt(c.varF,0)+NB+'FCFA';
+out.hidden=false;nt.hidden=false;
+nt.textContent=c.varP<=0?'Seuil de perte non positif selon ces paramètres : au niveau de confiance choisi, le modèle normal n’indique pas de perte à ce seuil. Ce n’est pas une perte, et l’hypothèse de normalité peut sous-estimer les queues.':'Sous l’hypothèse de normalité, la perte ne dépasserait ce seuil qu’avec une probabilité de '+(100-Number(r.v.conf))+NB+'% sur l’horizon implicite des paramètres.';}
+$('#go').addEventListener('click',run);
+$('#rs').addEventListener('click',function(){FIELDS.forEach(function(f){inp[f.id].value='';inp[f.id].removeAttribute('aria-invalid');$('#e-'+f.id).textContent='';});sel.value='95';$('#e-conf').textContent='';$('#gerr').textContent='';$('#out').hidden=true;$('#nt').hidden=true;});
+
+/* Contact : constantes à renseigner */
+var EMAIL_USER='kablankouameezekiel29',EMAIL_DOMAIN='gmail.com',LINKEDIN='https://www.linkedin.com/in/kouame-ezekiel-kablan-97b47136b',GITHUB='';
+var addr=EMAIL_USER+'@'+EMAIL_DOMAIN,okMail=/^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]{1,190}\.[A-Za-z]{2,}$/.test(addr);
+var em=$('#em'),ml=$('#ml'),cs=$('#cs');
+if(okMail){em.textContent=addr;ml.setAttribute('href','mailto:'+addr);ml.setAttribute('aria-disabled','false');ml.removeAttribute('role');}
+else{ml.addEventListener('click',function(e){e.preventDefault();cs.textContent='Adresse e-mail à compléter dans le code du site.';});}
+$('#cp').addEventListener('click',function(){
+if(!okMail){cs.textContent='Adresse e-mail à compléter dans le code du site.';return;}
+function fb(){try{var r=document.createRange();r.selectNodeContents(em);var s=getSelection();s.removeAllRanges();s.addRange(r);cs.textContent='Adresse sélectionnée : copiez-la avec Ctrl+C ou Cmd+C.';}catch(e){cs.textContent='Copie impossible : sélectionnez l’adresse manuellement.';}}
+if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(function(){cs.textContent='Adresse copiée.';},fb);}else fb();});
+[['#li',LINKEDIN],['#gh',GITHUB]].forEach(function(p){if(/^https:\/\/[^\s"'<>]+$/.test(p[1])){var a=h('a',{href:p[1],rel:'noopener noreferrer',target:'_blank'},p[1]);$(p[0]).textContent='';$(p[0]).append(a);}});
+
+$('#yr').textContent=String(new Date().getFullYear());
+
+/* Révélation au scroll */
+var rv=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});rv.forEach(function(e){io.observe(e);});}
+else rv.forEach(function(e){e.classList.add('in');});
+})();
+</script>
+</body>
+</html>
