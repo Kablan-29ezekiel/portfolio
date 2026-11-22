@@ -232,10 +232,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nv.classLis
 
 /* Compétences */
 var SK=[
-['A','Mathématiques et statistiques',['Probabilités','Statistiques','Optimisation','Économétrie','Séries temporelles','Régression quantile']],
+['A','Mathématiques et statistiques',['Probabilités','Statistiques','Optimisation','Économétrie','Séries temporelles','Régression quantile','Régression linéaire','Bootstrap']],
 ['B','Machine learning et IA',['Elastic-Net','Random Forest','XGBoost','Prévision']],
 ['C','Finance de marché',['Markowitz','VaR','CVaR','Gestion des risques','Analyse de la BRVM']],
-['D','Outils',['Python','Excel','VBA','SQL','LaTeX']]];
+['D','Outils',['Python','R','Excel','VBA','SQL','LaTeX']]];
 var fl=$('#fl'),sg=$('#sk-g'),cur='all';
 function renderSk(){sg.textContent='';SK.forEach(function(s){if(cur!=='all'&&cur!==s[0])return;
 sg.append(h('div',{class:'card'},[h('h3',null,s[1]),h('ul',{class:'chips'},s[2].map(function(x){return h('li',null,x);}))]));});
@@ -265,6 +265,16 @@ var PJ=[
 ['Comparaison','La régression classique modélise la moyenne ; la régression quantile permet un regard sur toute la distribution.'],
 ['Perspectives','Apports possibles en gestion des risques (VaR). Aucun résultat empirique n’est présenté ici.'],
 ['Résultats',TBC],['Documents',TBC]]},
+{t:'Bootstrap et régression linéaire : intervalles de confiance',s:'Projet de cours (Master 2), rapport R Markdown daté du 16 novembre 2026',f:[
+['Contexte','Projet du cours « Bootstrap et Application » (Master 2), sur le modèle de régression linéaire gaussien.'],
+['Problématique','Comment construire des intervalles de confiance à 95 % pour les coefficients d’une régression linéaire par bootstrap, et que changent les hypothèses faites sur les erreurs ?'],
+['Objectifs','Comparer le bootstrap de couples et le bootstrap de résidus, d’abord sur des données réelles (airquality), puis sur des données simulées homoscédastiques et hétéroscédastiques.'],
+['Méthodologie','2000 réplicats bootstrap par méthode ; intervalles normal, percentile et BCa, comparés à l’intervalle classique. Question 1 : jeu airquality (111 observations après suppression des valeurs manquantes). Question 2 : simulation avec un vrai coefficient connu.'],
+['Outils','R (package boot), R Markdown'],
+['État d’avancement','Rapport rédigé. Statut de remise : '+TBC],
+['Résultats (issus du rapport)','Sur airquality, les deux méthodes concluent que les trois variables explicatives sont significatives à 5 %. Le bootstrap de résidus donne des résultats proches de la méthode classique, alors que celui de couples s’en écarte, ce que le rapport relie à des hypothèses du modèle imparfaitement vérifiées. Sur données simulées, le rapport compare les deux méthodes selon que la variance des erreurs est constante ou non.'],
+['Perspectives',TBC],
+['Documents','Rapport (.Rmd et .docx) : lien '+TBC]]},
 {t:'Autres projets',s:'Selon leur état réel',f:[
 ['Optimisation de portefeuille (Markowitz)','État : '+TBC],
 ['Analyse quantitative de la BRVM','État : '+TBC],
